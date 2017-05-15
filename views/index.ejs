@@ -1,0 +1,57 @@
+
+<head>
+	<title>Food delivery service</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link type="text/css" rel="stylesheet" href="/assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="/assets/css/custom.css">
+</head>
+<body>
+ <nav class="navbar navbar-inverse">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">OrderFood</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+          <ul class="nav navbar-nav">
+            <li><button id="myBtn" type="submit">Log in or Sign in</button></li>
+          </ul>
+         <!--  <ul class="nav navbar-nav navbar-right">
+            <li><a href="/signOut">Logout</a></li>
+          </ul> -->
+        </div>
+      </div>
+    </nav>
+
+    <div id="myModal" class="modal">
+    	<div class="modal-content">
+    		<span class="close">&times;</span>
+    		<div id="boxid" class="boxclass">
+    			<form class="form-sigin">
+    				<label for="email" class="sr-only">Email Address</label>
+    				<input type="email" name="email" id="email" class="form-control" placeholder="email-address">
+    				<label for="password" class="sr-only">Password</label>
+    				<input type="password" name="password" id="password" class="form-control" placeholder="password">
+    				<button class="btn btn-primary btn-block" type="submit">Sign in</button>
+            <p>No Account? <a href="register">Create An Account</a></p>
+    				
+    			</form>
+    		</div>
+    	</div>
+    </div>
+
+
+
+
+    <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/modal.js"></script>
+
+</body>
