@@ -3,11 +3,26 @@
 <head>
 	<title>dashboard</title>
 	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css">
 	<link rel="stylesheet" type="text/css" href="/css/custom.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+
+  <script>
+  let disPrice = 0;
+  const calculateOrder = (g) => {
+  
+  let amount = $('#amt').val();
+    disPrice += g;
+    $("#price").html("");
+  $("#price").html((disPrice));
+  
+  };
+</script>
 </head>
 <body>
+
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <div class="navbar-header">
@@ -22,29 +37,96 @@
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
       <ul class="nav navbar-nav navbar-right">
-      	<li><a href="#">My Account</a></li>
-        <li><a href="/signOut">Log out</a></li>
+        <li>
+        <div class="btn-group myAccount">
+            <a href="#" class="btn btn-primary "><i class="fa fa-user-circle" aria-hidden="true"></i> My Account</a>
+            <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
+         <ul class="dropdown-menu">
+             <li><a href="#">Order History</a></li>
+         </ul>
+      </div>
+      </li>
+        <li><a href="/signOut" class="btn btn-primary logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
       </ul>
     </div>
   </div>
 </nav>
 <div class="text-center">
-<h1>Order foods online</h1>
+<h1>Order delicious meal online</h1>
 <p>Delivered right to your door step</p>
 <p>Check out the foods available</p>
 </div>
   <div class="menu">
     <p>Fast food</p>
-    <div><img src="/img/fast-food/hamburgger.png"  alt="hambuger" /></div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
-    <div><img src="/img/fast-food/hotdog.png" alt="hotdog" /></div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
-    <div><img src="/img/fast-food/pizza-featured.png" alt="pizza" /></div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
-    <div>ff4</div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
-    <div>ff5</div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
-    <div>ff6</div><a href="#" class="btn btn-primary btn-sm">Add to cart</a>
+    <div class="row">
+  <div>
+    <div class="thumbnail">
+      <img src="/img/fast-food/hamburger.jpg"" alt="hambuger">
+      <div class="caption">
+        <h3>Hamburger with fries</h3>
+        <p>Price: <span id="amt">1500</span></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1500)">Order</a></p>
+      </div>
+    </div>
   </div>
+</div>
+<div class="row">
+<div>
+    <div class="thumbnail">
+      <img src="/img/fast-food/hotdog.png"" alt="hotdog">
+      <div class="caption">
+        <h3>Hot-dog</h3>
+        <p>Price: <span id="amt">1000</span></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Order</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+<div>
+    <div class="thumbnail">
+      <img src="/img/fast-food/pizza-featured.png" alt="pizza">
+      <div class="caption">
+        <h3>Pizza</h3>
+        <p>Price: <span id="amt">1200</span></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Order</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+  </div>
+
   <div class="menu">
   <p>Local dish</p>
-      <div>ld1</div>
+  <div class="row">
+      <div>
+    <div class="thumbnail">
+      <img src="/img/fast-food/semo.jpg" alt="semo">
+      <div class="caption">
+        <h3>Semo with Vegetable</h3>
+        <p>Price: <span id="amt">700</span></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Order</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+ <div class="row">
+      <div>
+    <div class="thumbnail">
+      <img src="/img/fast-food/jollof-rice.jpg" alt="jollof rice">
+      <div class="caption">
+        <h3>Jollof rice</h3>
+        <p>Price: <span id="amt">800</span></p>
+        <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(800)">Order</a></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
     <div>ld2</div>
     <div>ld3</div>
     <div>ld4</div>
@@ -63,8 +145,14 @@
   
 <div class="order">
   <h2>Your Order</h2>
-  <p>Quantity</p>
-  <p>Total price</p>
-
+  <p>Total price: <div id="price"></div></p>
+<a href="#" class="btn btn-success">Order now</a>
   </div>
+
+
+  <script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>
+    <script src="/js/bootstrap.min.js"></script>
+
+
+    
 </body>
