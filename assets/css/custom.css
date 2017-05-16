@@ -1,20 +1,26 @@
-.modal {
-	display: none;
-	position: fixed;
-	z-index: 1;
-
+h1 {
+    color: red;
+    font-size: 60px;
 }
 
- .close {
-            color: #aaa;
-            float: right;
-            font-size: 28px;
-            font-weight: bold;
-        }
-        
- .close:hover,
-        .close:focus {
-            color: black;
-            text-decoration: none;
-            cursor: pointer;
-        }
+.navbar {
+    height: 90px;
+}
+
+.btn {
+    margin-top: 20px;
+}
+
+img {
+    height: 120px;
+    width: 120px;
+}
+
+.menu {
+    width: 30%;
+    height: auto;
+    float: left;
+}
+.class {
+    float: right;
+}
