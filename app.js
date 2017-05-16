@@ -8,7 +8,6 @@ const auth = require('./controllers/auth.js');
 const app = express();
 
 
-
 //home
 app.get('/', (req, res) =>{
 	res.render("index", {error: null});
@@ -34,7 +33,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.post('/register', auth.register);
 app.post('/', auth.login);
 app.get('/signOut', auth.signOut);
-app.get('/google', auth.google);
+
 
 app.use('/dashboard', (req, res, next) => {
 	next()
