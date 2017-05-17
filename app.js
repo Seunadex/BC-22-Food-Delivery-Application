@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const auth = require('./controllers/auth.js');
-const getOrder = require("./controllers/order.js");
+;
 
 // Initialize express
 const app = express();
@@ -37,9 +37,6 @@ app.get('/signOut', auth.signOut);
 app.use('/dashboard', (req, res, next) => {
 	next()
 }, require('./routes/dashboard.js'));
-
-
-// fire controllers
 
 // Listen to a port
 app.listen(process.env.PORT || 3000, ()=> {

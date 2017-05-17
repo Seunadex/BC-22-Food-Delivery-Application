@@ -1,4 +1,17 @@
-const firebase = require('../helpers/firebase.js');
+
+let firebase = require("firebase");
+let config = {
+    apiKey: "AIzaSyAsAqUM0CityL2tudyEEmmGpcIoG_0uFQk",
+    authDomain: "food-delivery-service-a2076.firebaseapp.com",
+    databaseURL: "https://food-delivery-service-a2076.firebaseio.com",
+    projectId: "food-delivery-service-a2076",
+    storageBucket: "food-delivery-service-a2076.appspot.com",
+    messagingSenderId: "546845876251"
+  };
+  
+firebase.initializeApp(config);
+
+
 let db = firebase.database();
 let ref = db.ref();
 let fire_base = firebase.auth();
@@ -10,17 +23,6 @@ module.exports.register = (req, res) => {
         password = req.body.password;
 
     fire_base.createUserWithEmailAndPassword(email, password)
-        .then((user) => {
-            let userId = user.uid;
-            let userRef = ref.child('users/' + userId);
-            
-            return userRef.set({
-                userId,
-                full_name,
-                email,
-                password
-            });
-        })
         .then(res.redirect('/dashboard'))
         .catch((err) => {
             let errorCode = err.code;
