@@ -16,6 +16,7 @@
   
   let amount = $('#amt').val();
     disPrice += g;
+    
     $("#price").html("");
   $("#price").html((disPrice));
   
@@ -109,7 +110,7 @@
   
 <div class="order col-md-2">
   <h2>Your Order</h2>
-  <p>Total price: <div id="price"></div></p>
+  <p>Total price: <div id="price" name="price"></div></p>
 <a href="#" class="btn btn-success">Order now</a>
   </div>
 

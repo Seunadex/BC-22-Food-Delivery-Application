@@ -2,6 +2,7 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const auth = require('./controllers/auth.js');
+const saveOrder = require('./controllers/order.js')
 
 
 // Initialize express
@@ -22,7 +23,7 @@ app.get('/register', (req, res) => {
 app.set('views', process.cwd() + '/views');
 app.set('view engine', 'ejs');
 
-// Statisc files
+// Static files
 app.use(express.static('assets'));
 
 app.use(bodyParser.json());
@@ -33,6 +34,7 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.post('/register', auth.register);
 app.post('/', auth.login);
 app.get('/signOut', auth.signOut);
+app.post('/save_order', saveOrder.save_order);
 
 
 app.use('/dashboard', (req, res, next) => {
@@ -44,6 +46,6 @@ app.use('/dashboard', (req, res, next) => {
 
 
 // Listen to a port
-app.listen(3000, ()=> {
+app.listen(process.env.PORT || 3000, ()=> {
 	console.log('You are listening to port 3000')
 });
