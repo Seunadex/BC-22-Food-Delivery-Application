@@ -9,10 +9,29 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+  <script src="https://www.gstatic.com/firebasejs/3.9.0/firebase.js"></script>
+  <script src="./helpers/firebase.js"></script>
 
 
 </head>
+
+
 <script>
+
+  function save_order() {
+    let quantity = document.getElementById('qty').innerHTML;
+    let price = document.getElementById('price').innerHTML;
+    data = {'quantity': quantity, 'price': price};
+
+    firebase.auth().onAuthStateChanged(user => {
+      let currentUser = user.email;
+      let dbRef = firebase.database().ref();
+      dbRef.child(currentUser).set(data);
+    });
+  }
+
+
+
   let disPrice = 0;
   let quantity = 0;
   
@@ -26,7 +45,6 @@ const calculateOrder = (g) => {
       warn = "Cart full";
 
     } ;
-
 
     $("#warning").html("")
     $("warniing").html(warn)
@@ -181,12 +199,12 @@ const calculateOrder = (g) => {
           </div>
         </div>
 
-    <div class="Add to cart col-md-2 col-sm-2">
+    <div class="order col-md-2 col-sm-2">
       <h2>Your Order</h2>
-      <h4>Quantity: <span id="qty"></span></h4>
-      <h4>Total price: <span id="price"></span></h4>
+      <h4>Quantity: <span id="qty" name="quantity"></span></h4>
+      <h4>Total price: <span id="price" name="price"></span></h4>
       <div id="warning" style="color: red"></div>
-      <a href="#" class="btn btn-success" onclick="(getOrder())">Checkout</a>
+      <button class="btn btn-success" type="button" onclick="save_order()">Checkout</button>
    </div>
   </div>
 </div>
@@ -195,8 +213,5 @@ const calculateOrder = (g) => {
   <script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
 
-    
-
-
-    
+     
 </body>

@@ -1,5 +1,3 @@
-const firebase = require('firebase');
-
 let config = {
     apiKey: "AIzaSyAsAqUM0CityL2tudyEEmmGpcIoG_0uFQk",
     authDomain: "food-delivery-service-a2076.firebaseapp.com",
@@ -9,4 +7,4 @@ let config = {
     messagingSenderId: "546845876251"
   };
   
-  module.exports = firebase.initializeApp(config);
+ firebase.initializeApp(config);
