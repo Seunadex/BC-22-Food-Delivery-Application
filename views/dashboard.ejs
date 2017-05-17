@@ -16,7 +16,7 @@
   let disPrice = 0;
   let quantity = 0;
   
-const calculateAdd to cart = (g) => {
+const calculateOrder = (g) => {
   
   let amount = $('#amt').val();
   let warn = "";
@@ -59,7 +59,7 @@ const calculateAdd to cart = (g) => {
             <a href="#" class="btn btn-primary ">My Account</a>
             <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
          <ul class="dropdown-menu">
-             <li><a href="#">Add to cart History</a></li>
+             <li><a href="#">Order History</a></li>
          </ul>
       </div>
       </li>
@@ -70,7 +70,7 @@ const calculateAdd to cart = (g) => {
 </nav>
 
 <div class="text-center head">
-<h1>Add to cart delicious meal online</h1>
+<h1>Order delicious meal online</h1>
 <p>Delivered right to your door step</p>
 <p>Check out the foods available</p>
 </div>
@@ -84,7 +84,7 @@ const calculateAdd to cart = (g) => {
               <div class="caption">
              <h4>Hamburger with fries</h4>
              <p>Price: <span id="amt">&#8358;1500</span></p>
-             <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1500)">Add to cart</a></p></div>
+             <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1500)">Add to cart</a></p></div>
             </div>
 
             <div class="col-md-3 col-sm-6">
@@ -92,21 +92,21 @@ const calculateAdd to cart = (g) => {
               <div class="caption">
               <h4>Hot-dog</h4>
               <p>Price: <span id="amt">&#8358;1000</span></p>
-              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1000)">Add to cart</a></p></div>
+              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Add to cart</a></p></div>
             </div>
             <div class="col-md-3 col-sm-6">
              <img src="/img/fast-food/pizza-featured.png" alt="pizza">
               <div class="caption">
                <h4>Pizza</h4>
               <p>Price: <span id="amt">&#8358;1200</span></p>
-              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1200)">Add to cart</a></p></div>
+              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Add to cart</a></p></div>
             </div>
             <div class="col-md-3 col-sm-6">
               <img src="/img/local/semo.jpg" alt="semo">
                <div class="caption">
                <h4>Semovita with Vegetable</h4>
                <p>Price: <span id="amt">&#8358;700</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(700)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
             <div class="col-md-3 col-sm-6">
@@ -114,14 +114,14 @@ const calculateAdd to cart = (g) => {
               <div class="caption">
               <h4>Jollof rice with chicken</h4>
               <p>Price: <span id="amt">&#8358;800</span></p>
-              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(800)">Add to cart</a></p></div>
+              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(800)">Add to cart</a></p></div>
             </div>
             <div class="col-md-3 col-sm-6">
               <img src="/img/local/pounded_yam.png" alt="pounded-yam">
                <div class="caption">
                <h4>Pounded yam</h4>
                <p>Price: <span id="amt">&#8358;900</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(900)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(900)">Add to cart</a></p></div>
            </div>
 
             <div class="col-md-3 col-sm-6">
@@ -129,7 +129,7 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>Fried Rice with Chicken</h4>
                <p>Price: <span id="amt">&#8358;1000</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1000)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Add to cart</a></p></div>
            </div>
 
            <div class="col-md-3 col-sm-6">
@@ -137,7 +137,7 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>tuwo-shinkafa</h4>
                <p>Price: <span id="amt">&#8358;700</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(700)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
            <div class="col-md-3 col-sm-6">
@@ -145,7 +145,7 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>fufu</h4>
                <p>Price: <span id="amt">&#8358;600</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(600)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(600)">Add to cart</a></p></div>
            </div>
 
            <div class="col-md-3 col-sm-6">
@@ -153,7 +153,7 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>Beans with stew</h4>
                <p>Price: <span id="amt">&#8358;700</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(700)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
            <div class="col-md-3 col-sm-6">
@@ -161,7 +161,7 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>Colourful Pasta Salad</h4>
                <p>Price: <span id="amt">&#8358;700</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1200)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Add to cart</a></p></div>
            </div>
 
            <div class="col-md-3 col-sm-6">
@@ -169,14 +169,14 @@ const calculateAdd to cart = (g) => {
                <div class="caption">
                <h4>Sweet potato pie</h4>
                <p>Price: <span id="amt">&#8358;900</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(900)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(900)">Add to cart</a></p></div>
            </div>
            <div class="col-md-3 col-sm-6">
               <img src="/img/continental/spaghetti_pancetta_mushroom.png" alt="spaghetti">
                <div class="caption">
                <h4>Spaghetti pancetta with mushroom</h4>
                <p>Price: <span id="amt">&#8358;1700</span></p>
-                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateAdd to cart(1500)">Add to cart</a></p></div>
+                <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1500)">Add to cart</a></p></div>
            </div>
           </div>
         </div>
@@ -186,7 +186,7 @@ const calculateAdd to cart = (g) => {
       <h4>Quantity: <span id="qty"></span></h4>
       <h4>Total price: <span id="price"></span></h4>
       <div id="warning" style="color: red"></div>
-      <a href="#" class="btn btn-success" onclick="(getAdd to cart())">Checkout</a>
+      <a href="#" class="btn btn-success" onclick="(getOrder())">Checkout</a>
    </div>
   </div>
 </div>
