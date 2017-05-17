@@ -2,11 +2,10 @@ const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const auth = require('./controllers/auth.js');
-
+const getOrder = require("./controllers/order.js");
 
 // Initialize express
 const app = express();
-
 
 //home
 app.get('/', (req, res) =>{
@@ -42,8 +41,7 @@ app.use('/dashboard', (req, res, next) => {
 
 // fire controllers
 
-
 // Listen to a port
-app.listen(3000, ()=> {
+app.listen(process.env.PORT || 3000, ()=> {
 	console.log('You are listening to port 3000')
 });
