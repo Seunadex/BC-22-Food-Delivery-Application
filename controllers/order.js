@@ -15,6 +15,7 @@ let getOrder = () => {
 		Price: $('#price').val()
 	}
 	console.log(data);
+	alert("Order successful")
 	let ref = db.ref('orders');
 	ref.push(data);
 };
