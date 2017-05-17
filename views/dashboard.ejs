@@ -8,6 +8,7 @@
 	<link rel="stylesheet" type="text/css" href="/css/custom.css">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
   <link href="https://fonts.googleapis.com/css?family=Lobster" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
 
   <script>
   let disPrice = 0;
@@ -21,7 +22,7 @@
   };
 </script>
 </head>
-<body>
+<body style="background-color: #ffcccc">
 
 	<nav class="navbar navbar-inverse">
   <div class="container-fluid">
@@ -39,7 +40,7 @@
       <ul class="nav navbar-nav navbar-right">
         <li>
         <div class="btn-group myAccount">
-            <a href="#" class="btn btn-primary "><i class="fa fa-user-circle" aria-hidden="true"></i> My Account</a>
+            <a href="#" class="btn btn-primary ">My Account</a>
             <a href="#" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></a>
          <ul class="dropdown-menu">
              <li><a href="#">Order History</a></li>
@@ -51,99 +52,62 @@
     </div>
   </div>
 </nav>
-<div class="text-center">
+
+<div class="text-center head">
 <h1>Order delicious meal online</h1>
 <p>Delivered right to your door step</p>
 <p>Check out the foods available</p>
 </div>
-  <div class="menu">
-    <p>Fast food</p>
+  <div class="menu col-md-10">
     <div class="row">
-  <div>
-    <div class="thumbnail">
       <img src="/img/fast-food/hamburger.jpg"" alt="hambuger">
       <div class="caption">
         <h3>Hamburger with fries</h3>
-        <p>Price: <span id="amt">1500</span></p>
+        <p>Price: <span id="amt">&#8358;1500</span></p>
         <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1500)">Order</a></p>
-      </div>
     </div>
   </div>
-</div>
+
 <div class="row">
-<div>
-    <div class="thumbnail">
       <img src="/img/fast-food/hotdog.png"" alt="hotdog">
       <div class="caption">
         <h3>Hot-dog</h3>
-        <p>Price: <span id="amt">1000</span></p>
+        <p>Price: <span id="amt">&#8358;1000</span></p>
         <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Order</a></p>
-      </div>
-    </div>
   </div>
 </div>
 
 <div class="row">
-<div>
-    <div class="thumbnail">
       <img src="/img/fast-food/pizza-featured.png" alt="pizza">
       <div class="caption">
         <h3>Pizza</h3>
-        <p>Price: <span id="amt">1200</span></p>
+        <p>Price: <span id="amt">&#8358;1200</span></p>
         <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Order</a></p>
-      </div>
-    </div>
   </div>
 </div>
 
-  </div>
-
-  <div class="menu">
-  <p>Local dish</p>
   <div class="row">
-      <div>
-    <div class="thumbnail">
       <img src="/img/fast-food/semo.jpg" alt="semo">
       <div class="caption">
         <h3>Semo with Vegetable</h3>
-        <p>Price: <span id="amt">700</span></p>
+        <p>Price: <span id="amt">&#8358;700</span></p>
         <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Order</a></p>
-      </div>
-    </div>
   </div>
 </div>
  <div class="row">
-      <div>
-    <div class="thumbnail">
       <img src="/img/fast-food/jollof-rice.jpg" alt="jollof rice">
       <div class="caption">
         <h3>Jollof rice</h3>
-        <p>Price: <span id="amt">800</span></p>
+        <p>Price: <span id="amt">&#8358;800</span></p>
         <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(800)">Order</a></p>
-      </div>
-    </div>
   </div>
+</div>
 </div>
 
 
 
-    <div>ld2</div>
-    <div>ld3</div>
-    <div>ld4</div>
-    <div>ld5</div>
-    <div>ld6</div>
-  </div>
-  <div class="menu">
-  <p>Continental</>
-    <div>ff1</div>
-    <div>ff2</div>
-    <div>ff3</div>
-    <div>ff4</div>
-    <div>ff5</div>
-    <div>ff6</div>
-  </div>
   
-<div class="order">
+<div class="order col-md-2">
   <h2>Your Order</h2>
   <p>Total price: <div id="price"></div></p>
 <a href="#" class="btn btn-success">Order now</a>
