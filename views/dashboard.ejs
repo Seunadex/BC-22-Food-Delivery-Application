@@ -22,7 +22,7 @@ const calculateOrder = (g) => {
   let warn = "";
     disPrice += g;
     quantity += 1;
-    if (quantity > 10) {
+    if (quantity === 10) {
       warn = "Cart full";
 
     } ;
@@ -63,7 +63,7 @@ const calculateOrder = (g) => {
          </ul>
       </div>
       </li>
-        <li><a href="/signOut" class="btn btn-primary logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
+        <li><a href="/signOut" class="btn btn-primary btn-sm logout"><i class="fa fa-sign-out" aria-hidden="true"></i> Log out</a></li>
       </ul>
     </div>
   </div>
@@ -186,10 +186,31 @@ const calculateOrder = (g) => {
       <h4>Quantity: <span id="qty"></span></h4>
       <h4>Total price: <span id="price"></span></h4>
       <div id="warning" style="color: red"></div>
-      <a href="#" class="btn btn-success" onclick="(getOrder())">Checkout</a>
+      <a href="#" class="btn btn-success" data-toggle="modal" data-target="#popUpWin" onclick="(getOrder())">Checkout</a>
    </div>
   </div>
 </div>
+
+
+
+<div class="modal fade" id="popUpWin">
+  <div class="modal-dialog">
+    <div class="modal-content">
+     <div class="modal-header">
+     
+      <div class = "alert alert-danger alert-dismissable">
+        <a href="#" class="close" data-dismiss="modal" arial-label="close">&times;</a>
+        </div> 
+        <span><i class="fa fa-check" aria-hidden="true"></i><p>You have successfully order for one/some of our deliious meal, Enjoy yourself and like us on <a href="https://web.facebook.com/adekunle.o.oladele"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+
+
+       </div>
+    </div>
+  </div>
+</div>
+
+
+
 
   
   <script type="text/javascript" src="/js/jquery-1.11.2.min.js"></script>
