@@ -15,24 +15,28 @@
 <script>
   let disPrice = 0;
   let quantity = 0;
+  let priceList = [];
   
 const calculateOrder = (g) => {
   
   let amount = $('#amt').val();
   let warn = "";
     disPrice += g;
-    quantity += 1;
-    if (quantity === 10) {
+    // quantity += 1;
+    priceList.push(g);
+    console.log(priceList);
+    if (quantity > 10) {
+      alert("cart full");
       warn = "Cart full";
 
-    } ;
+    };
 
 
     $("#warning").html("")
     $("warniing").html(warn)
 
-    $("#qty").html("");
-    $("#qty").html(quantity)
+    // $("#qty").html("");
+    // $("#qty").html(quantity)
 
     $("#price").html("");
   $("#price").html((disPrice));
@@ -49,7 +53,7 @@ const calculateOrder = (g) => {
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand img-responsive" href="#">Dexy Foods</a>
+      <a class="navbar-brand" href="#">Dexy Foods</a>
     </div>
 
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
@@ -77,9 +81,9 @@ const calculateOrder = (g) => {
 
 <div class="container-fluid">
     <div class="row">
-        <div class="menu col-md-10 col-sm-10">
+        <div class="menu col-md-8 col-sm-8">
           <div class="row">
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/fast-food/hamburger.jpg"" alt="hambuger">
               <div class="caption">
              <h4>Hamburger with fries</h4>
@@ -87,21 +91,21 @@ const calculateOrder = (g) => {
              <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1500)">Add to cart</a></p></div>
             </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/fast-food/hotdog.png"" alt="hotdog">
               <div class="caption">
               <h4>Hot-dog</h4>
               <p>Price: <span id="amt">&#8358;1000</span></p>
               <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Add to cart</a></p></div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
              <img src="/img/fast-food/pizza-featured.png" alt="pizza">
               <div class="caption">
                <h4>Pizza</h4>
               <p>Price: <span id="amt">&#8358;1200</span></p>
               <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Add to cart</a></p></div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/local/semo.jpg" alt="semo">
                <div class="caption">
                <h4>Semovita with Vegetable</h4>
@@ -109,14 +113,14 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/local/jollof-rice.jpg" alt="jollof rice">
               <div class="caption">
               <h4>Jollof rice with chicken</h4>
               <p>Price: <span id="amt">&#8358;800</span></p>
               <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(800)">Add to cart</a></p></div>
             </div>
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/local/pounded_yam.png" alt="pounded-yam">
                <div class="caption">
                <h4>Pounded yam</h4>
@@ -124,7 +128,7 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(900)">Add to cart</a></p></div>
            </div>
 
-            <div class="col-md-3 col-sm-6">
+            <div class="col-md-4 col-sm-6">
               <img src="/img/local/fried-rice-with-chicken.jpg" alt="fried-rice">
                <div class="caption">
                <h4>Fried Rice with Chicken</h4>
@@ -132,7 +136,7 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1000)">Add to cart</a></p></div>
            </div>
 
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/local/tuwo_shinkafa.png" alt="tuwo">
                <div class="caption">
                <h4>tuwo-shinkafa</h4>
@@ -140,7 +144,7 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/local/fufu.png" alt="fufu">
                <div class="caption">
                <h4>fufu</h4>
@@ -148,7 +152,7 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(600)">Add to cart</a></p></div>
            </div>
 
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/local/beans.jpg" alt="beans">
                <div class="caption">
                <h4>Beans with stew</h4>
@@ -156,7 +160,7 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(700)">Add to cart</a></p></div>
            </div>
 
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/continental/colourful-pasta-salad.jpg" alt="Pasta Salad">
                <div class="caption">
                <h4>Colourful Pasta Salad</h4>
@@ -164,14 +168,14 @@ const calculateOrder = (g) => {
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(1200)">Add to cart</a></p></div>
            </div>
 
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/continental/sweet-potato-pie.jpg" alt="Sweet potato pie">
                <div class="caption">
                <h4>Sweet potato pie</h4>
                <p>Price: <span id="amt">&#8358;900</span></p>
                 <p><a href="#" class="btn btn-primary btn-sm" role="button" onclick="calculateOrder(900)">Add to cart</a></p></div>
            </div>
-           <div class="col-md-3 col-sm-6">
+           <div class="col-md-4 col-sm-6">
               <img src="/img/continental/spaghetti_pancetta_mushroom.png" alt="spaghetti">
                <div class="caption">
                <h4>Spaghetti pancetta with mushroom</h4>
@@ -181,12 +185,57 @@ const calculateOrder = (g) => {
           </div>
         </div>
 
-    <div class="Add to cart col-md-2 col-sm-2">
+    <div class="order col-md-4 col-sm-4">
       <h2>Your Order</h2>
-      <h4>Quantity: <span id="qty"></span></h4>
-      <h4>Total price: <span id="price"></span></h4>
+      <form class="form-horizontal" method="POST" action="/save_orders">
+        <div class="form-group">
+          <label for="inputName" class="col-lg-2 control-label">FullName</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputName" placeholder="Name" name="fullName">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputAddress" class="col-lg-2 control-label">Address</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputAddress" name="inputAddress" placeholder="Address">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="inputPhone" class="col-lg-2 control-label">Phone</label>
+          <div class="col-lg-10">
+            <input type="text" class="form-control" id="inputPhone" name="inputPhone" placeholder="Phone no">
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="qty" class="col-lg-2 control-label">Quantity</label>
+          <div class="col-lg-10">
+           <select id="qty" name="qty">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="price" class="col-lg-2 control-label">Total price</label>
+          <div class="col-lg-10">
+            <span class="form-control" id="price" name="price"></span>
+          </div>
+        </div>
       <div id="warning" style="color: red"></div>
-      <a href="#" class="btn btn-success" data-toggle="modal" data-target="#popUpWin" onclick="(getOrder())">Checkout</a>
+      <div class="form-group">
+        <div class="col-lg-10 col-lg-offset-2">
+          <button type="submit" class="btn btn-success" data-toggle="modal" data-target="#popUpWin">Checkout</button>
+        </div>
+      </div>
+      </form>
    </div>
   </div>
 </div>
@@ -201,7 +250,7 @@ const calculateOrder = (g) => {
       <div class = "alert alert-danger alert-dismissable">
         <a href="#" class="close" data-dismiss="modal" arial-label="close">&times;</a>
         </div> 
-        <span><i class="fa fa-check" aria-hidden="true"></i><p>You have successfully order for one/some of our deliious meal, Enjoy yourself and like us on <a href="https://web.facebook.com/adekunle.o.oladele"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+        <span><i class="fa fa-check fa-3x" aria-hidden="true"></i><p>You have successfully order for one/some of our delicious meal, Enjoy yourself and like us on <p><a href="https://web.facebook.com/adekunle.o.oladele"><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
 
 
        </div>
@@ -209,6 +258,15 @@ const calculateOrder = (g) => {
   </div>
 </div>
 
+<footer id="footer" class="text-center">
+  <div class="social-buttons img-responsive">
+    <a href="https://www.facebook.com" target="_blank" class="btn social-btn btn-default"><i class="icon-cog-f fa fa-facebook-square fa-2x"></i></a>
+    <a href="https://www.linkedin.com" target="_blank" class="btn btn-default social-btn"><i class="icon-cog-l fa fa-linkedin-square fa-2x"></i></a>
+    <a href="https://www.github.com/seunadex" target="_blank" class="btn social-btn btn-default"><i class="icon-cog-g fa fa-github fa-2x"></i></a>
+    <a href="www.twitter.com" target="_blank" class="btn btn-default social-btn"><i class="icon-cog-t fa fa-twitter fa-2x"></i></a>
+  </div>
+  <h6>Dexy Foods&copy; 2017</h6>
+</footer>
 
 
 
