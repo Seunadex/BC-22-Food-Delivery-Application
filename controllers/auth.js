@@ -36,7 +36,7 @@ module.exports.login = (req, res) => {
     let full_name = req.body.full_name,
         email = req.body.email,
         password = req.body.password;
-
+console.log(email);
     fire_base.signInWithEmailAndPassword(email, password)
         .then((user) => {
             res.redirect('/dashboard');
