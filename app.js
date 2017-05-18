@@ -1,8 +1,13 @@
+const dotenv = require('dotenv');
 const express = require('express');
 const router = express.Router();
 const bodyParser = require('body-parser');
 const auth = require('./controllers/auth.js');
-const getOrder = require("./controllers/order.js");
+const order = require('./controllers/order.js');
+const firebase = require('./helpers/firebase.js');
+
+dotenv.config();
+
 
 // Initialize express
 const app = express();
@@ -21,12 +26,11 @@ app.get('/register', (req, res) => {
 app.set('views', process.cwd() + '/views');
 app.set('view engine', 'ejs');
 
-// Statisc files
+// Static files
 app.use(express.static('assets'));
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
-
 
 // getting post data
 app.post('/register', auth.register);
@@ -39,7 +43,9 @@ app.use('/dashboard', (req, res, next) => {
 }, require('./routes/dashboard.js'));
 
 
+
 // fire controllers
+order(app);
 
 // Listen to a port
 app.listen(process.env.PORT || 3000, ()=> {
