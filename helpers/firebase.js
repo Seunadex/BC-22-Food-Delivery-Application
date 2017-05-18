@@ -1,12 +1,14 @@
 const firebase = require('firebase');
+require('dotenv').config();
 
-let config = {
-    apiKey: "AIzaSyAsAqUM0CityL2tudyEEmmGpcIoG_0uFQk",
-    authDomain: "food-delivery-service-a2076.firebaseapp.com",
-    databaseURL: "https://food-delivery-service-a2076.firebaseio.com",
-    projectId: "food-delivery-service-a2076",
-    storageBucket: "food-delivery-service-a2076.appspot.com",
-    messagingSenderId: "546845876251"
+let  config = {
+    apiKey: process.env.apiKey,
+    authDomain: process.env.authDomain,
+    databaseURL: process.env.databaseURL,
+    projectId: process.env.projectId,
+    storageBucket: process.env.storageBucket,
+    messagingSenderId: process.env.messagingSenderId
   };
-  
-  module.exports = firebase.initializeApp(config);
+firebase.initializeApp(config);
+ 
+module.exports = firebase;
